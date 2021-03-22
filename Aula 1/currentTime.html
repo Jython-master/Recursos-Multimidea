@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>currentTime</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        $().ready(function(){
+            var a = document.getElementById("idd");
+            $("#play").click(function(){
+                a.play();
+            });
+            $("#pause").click(function(){
+                a.pause();
+            });
+            $("#time").click(function(){
+                a.currentTime = 140;
+                a.play();
+            });
+            $("#timee").click(function(){
+                a.currentTime = 0;
+                a.play();
+            });
+        });
+        </script>
+	</head>
+	<body>
+        <audio id="idd">
+            <source src="FS.m4a" type="audio/mp4" />
+            <source src="Frankie.mp3" type="audio/mpeg" />
+            
+        </audio>
+        <input type="button" id="play" value="play"/>
+        <input type="button" id="pause" value="pause"/>
+        <input type="button" id="time" value="currenttime"/>
+        <input type="button" id="timee" value="back to the beginning"/>
+	</body>
+</html>

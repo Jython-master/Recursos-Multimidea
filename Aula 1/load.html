@@ -1,0 +1,48 @@
+<!----Ola professor, tudo certo? entao criei um arquivo basico, one inicializo o js e ponho os arquivos de audio. A estrutura basica de todos os exercicios vai ser igual ao que esta no arquivo padrao. Pegar a musica para tocar que foi dificil, tive que abrir um coisa para gravar a tela do meu computador com audio, editar o video tirar imagem e exportar. Exportei em M4A e MP3, espero que funcione. Eu uso um arquivo para gerar o html automaticamente, desenvolvido por mim. ----->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>load</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        $().ready(function(){
+            var a = document.getElementById("idd");
+            var t1 = document.getElementById("aaa");
+            var t2 = document.getElementById("aa");
+            $("#play").click(function(){
+                a.play();
+            });
+            $("#pause").click(function(){
+                a.pause();
+            });
+            $("#time").click(function(){
+                a.currentTime = 0;
+                a.play();
+            });
+            $("#v1").click(function(){
+                t1.src = "Untitled%20Project.m4a";
+                t2.src = "Learn%20to%20travel%20%20%20%20travel%20to%20learn%20Robin%20Esrock%20at%20TEDxVancouver.mp3";
+                a.load()
+            });
+            $("#v2").click(function(){
+                t1.src = "FS.m4a";
+                t2.src = "Frankie.mp3";
+                a.load()
+            });
+        });
+        </script>
+	</head>
+	<body>
+        <audio id="idd" controls>
+            <source src="Untitled%20Project.m4a" id="aaa" type="audio/mp4" />
+            <source src="Learn%20to%20travel%20%20%20%20travel%20to%20learn%20Robin%20Esrock%20at%20TEDxVancouver.mp3" id="aa" type="audio/mpeg" />
+            
+        </audio>
+         <input type="button" id="play" value="play"/>
+        <input type="button" id="pause" value="pause"/>
+        <input type="button" id="time" value="back to the beginning"/>
+        <input type="button" id="v1" value="v1"/>
+        <input type="button" id="v2" value="v2"/>
+	</body>
+</html>

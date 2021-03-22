@@ -1,0 +1,47 @@
+<!----Ola professor, tudo certo? entao criei um arquivo basico, one inicializo o js e ponho os arquivos de audio. A estrutura basica de todos os exercicios vai ser igual ao que esta no arquivo padrao. Pegar a musica para tocar que foi dificil, tive que abrir um coisa para gravar a tela do meu computador com audio, editar o video tirar imagem e exportar. Exportei em M4A e MP3, espero que funcione. Eu uso um arquivo para gerar o html automaticamente, desenvolvido por mim. ----->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>ended</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        $().ready(function(){
+            var a = document.getElementById("idd");
+            $("#play").click(function(){
+                $("#aa").html("");
+                a.play();
+            });
+            $("#pause").click(function(){
+                a.pause();
+            });
+            $("#time").click(function(){
+                $("#aa").html("");
+                a.currentTime = 0;
+                a.play();
+            });
+            $("#timee").click(function(){
+                $("#aa").html("");
+                a.currentTime = 1260;
+                a.play();
+            });
+            a.onended = function(){
+                $("#aa").html("<img src=\"02e4dcd5541e5be82dcf13a1227c370b.jpg\" alt=\"That's all Folks\">");
+            }
+        });
+        </script>
+	</head>
+	<body>
+        <h1>Coloquei controls para você já ir direto para o final do vídeo, ou aperte o botão go to the end</h1>
+        <audio id="idd" controls>
+            <source src="Untitled%20Project.m4a" type="audio/mp4" />
+            <source src="Learn%20to%20travel%20%20%20%20travel%20to%20learn%20Robin%20Esrock%20at%20TEDxVancouver.mp3" type="audio/mpeg" />
+            
+        </audio>
+         <input type="button" id="play" value="play"/>
+        <input type="button" id="pause" value="pause"/>
+        <input type="button" id="time" value="back to the beginning"/>
+        <input type="button" id="timee" value="go to the end"/>
+        <div id="aa"></div>
+	</body>
+</html>
