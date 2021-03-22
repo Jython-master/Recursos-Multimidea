@@ -18,10 +18,10 @@
                 a.currentTime = 0;
                 a.play();
             });
-           function seek(){
-                $("#seek").html("You've seeked, but now it is <br/>"+a.seeking);
-            }
         });
+            function seek(){
+                document.getElementById("seek").innerHTML = "You've seeked, but now it is <br/>"+a.seeking
+            }
         </script>
 	</head>
 	<body>
