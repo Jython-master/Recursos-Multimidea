@@ -4,28 +4,15 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>seeking</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
-        $().ready(function(){
-            var a = document.getElementById("idd");
-            $("#play").click(function(){
-                a.play();
-            });
-            $("#pause").click(function(){
-                a.pause();
-            });
-            $("#time").click(function(){
-                a.currentTime = 0;
-                a.play();
-            });
-        });
             function seek(){
-                document.getElementById("seek").innerHTML = "You've seeked, but now it is <br/>"+a.seeking
+                $("#seek").html("You've seeked");
             }
         </script>
 	</head>
 	<body>
-        <audio id="idd" onseeked="seek()" onseeking="seek()" controls>
+        <audio id="idd" onseeking="seek()"  controls>
             <source src="Untitled%20Project.m4a" type="audio/mp4" />
             <source src="Learn%20to%20travel%20%20%20%20travel%20to%20learn%20Robin%20Esrock%20at%20TEDxVancouver.mp3" type="audio/mpeg" />
             
@@ -33,3 +20,27 @@
         <div id="seek">You haven't done seeking</div>
 	</body>
 </html>
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+        });
+        function seek(){
+                $("#seek").html("dcdsnjk");
+        }
+    </script>
+
+</head>
+<body>  
+    <audio id="id1" onseeking="seek()" src="Learn%20to%20travel%20%20%20%20travel%20to%20learn%20Robin%20Esrock%20at%20TEDxVancouver.mp3" controls></audio>
+    <div id="seek">nao</div>
+</body>
+</html>--->
