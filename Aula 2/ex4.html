@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--Fala professor, tudo certo. Esse e o codigo base, usei a base daqui para fazer todos os outros exercicios.---->
+<html>
+	<head>
+		<meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible">
+		<title>ex4</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $().ready(function(){
+                var video = document.getElementById("vid");
+                $("#pos1").click(function(){
+                    video.poster = "the-who.jpg";
+                });
+                $("#pos2").click(function(){
+                    video.poster = "c24241a316184ef63475de007cc183d1.jpg";
+                });
+            });
+        </script>
+	</head>
+	<body>
+        <video id="vid" poster="the-who.jpg" name="videoo" controls>
+            <source src="poplish%20mp4.mp4"/>
+            <source src="Untitled%20Project.avi"/>
+        </video>
+        <br/>
+        <input type="button" id="pos1" value="poster1">
+        <input type="button" id="pos2" value="poster2">
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--Fala professor, tudo certo. Esse e o codigo base, usei a base daqui para fazer todos os outros exercicios. So mostrei so o video pode ou nao ser mostrado, nao coloquei o maybe do canPlayType. Se nao pode rodar diz que nao, se pode ou talvez diz que sim---->
+<html>
+	<head>
+		<meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible">
+		<title>ex1</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body>
+        <video id="videoo" poster="the-who.jpg" controls>
+            <source src="poplish%20mp4.mp4" type="video/mp4">
+            <source src="Untitled%20Project.avi" type="video/avi">
+        </video>
+        <br/>
+        <input type="button" value="can you play the first file" id="vid1">
+        <input type="button" value="can you play the second file" id="vid2">
+        <div id="wi"></div>
+        <div id="he"></div>
+        <div id="cp"></div>
+        <script>
+        $().ready(function(){
+            var videoo = document.getElementById("videoo");
+            $("#he").html("height "+videoo.videoHeight);
+            $("#wi").html("width "+videoo.videoWidth);
+            $("#vid1").click(function(){
+                if(videoo.canPlayType("video/mp4") != ""){
+                    $("#cp").html("You can play MP4");
+                }
+                else{
+                    $("#cp").html("You can't play MP4");
+                }
+            });
+            $("#vid2").click(function(){
+                if(videoo.canPlayType("video/avi") != ""){
+                    $("#cp").html("You can play avi");
+                }
+                else{
+                    $("#cp").html("You can't play avi");
+                }
+            });
+        });
+        </script>
+	</body>
+</html>
